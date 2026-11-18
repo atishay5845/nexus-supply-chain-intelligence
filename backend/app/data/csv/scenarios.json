@@ -1,0 +1,44 @@
+[
+  {
+    "scenario_id": "SCN-001",
+    "title": "Supplier delay · Pump controllers",
+    "tag": "SUPPLIER DELAY",
+    "disruption_type": "supplier_delay",
+    "sku_id": "SKU-AX14",
+    "supplier_id": "SUP-01",
+    "required_qty": 500,
+    "destination": "North Hub",
+    "blocked_route_id": "",
+    "delay_days": 5,
+    "description": "Orion Components has reported a five-day delay on a critical pump-controller shipment. North Hub needs 500 units to protect the next production cycle.",
+    "severity": "CRITICAL"
+  },
+  {
+    "scenario_id": "SCN-002",
+    "title": "Route blockage · Valve assemblies",
+    "tag": "ROUTE BLOCK",
+    "disruption_type": "route_block",
+    "sku_id": "SKU-BT22",
+    "supplier_id": "SUP-04",
+    "required_qty": 180,
+    "destination": "West Hub",
+    "blocked_route_id": "RT-W-01",
+    "delay_days": 0,
+    "description": "A road closure has blocked the primary express corridor into West Hub. Existing stock can cover demand, but inbound replenishment must use another route.",
+    "severity": "HIGH"
+  },
+  {
+    "scenario_id": "SCN-003",
+    "title": "Critical stockout · Sensor modules",
+    "tag": "STOCKOUT RISK",
+    "disruption_type": "stockout",
+    "sku_id": "SKU-CX31",
+    "supplier_id": "SUP-06",
+    "required_qty": 600,
+    "destination": "Central Hub",
+    "blocked_route_id": "",
+    "delay_days": 0,
+    "description": "Central Hub is running below its safety-stock threshold. A 600-unit requirement is due, and procurement must cover the supply gap quickly.",
+    "severity": "CRITICAL"
+  }
+]

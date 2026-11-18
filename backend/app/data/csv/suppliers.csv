@@ -1,0 +1,11 @@
+supplier_id,supplier_name,sku_id,available_qty,lead_time_days,unit_price_inr,reliability_pct,status,is_primary
+SUP-01,Orion Components,SKU-AX14,0,5,2500,88,DELAYED,true
+SUP-02,Vega Industrial,SKU-AX14,400,3,2620,96,ACTIVE,false
+SUP-03,Nova Systems,SKU-AX14,600,6,2480,91,ACTIVE,false
+SUP-04,Meridian Controls,SKU-BT22,500,2,1020,97,ACTIVE,true
+SUP-05,Atlas Fluidworks,SKU-BT22,420,4,995,94,ACTIVE,false
+SUP-06,Kepler Motion,SKU-CX31,300,3,1790,95,ACTIVE,true
+SUP-07,Vertex Sensors,SKU-CX31,350,2,1840,98,ACTIVE,false
+SUP-08,Northstar Components,SKU-CX31,260,5,1680,90,ACTIVE,false
+SUP-09,Axis Automation,SKU-DP44,500,3,4180,96,ACTIVE,true
+SUP-10,Helix Industrial,SKU-DP44,300,4,4050,93,ACTIVE,false

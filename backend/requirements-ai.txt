@@ -1,0 +1,3 @@
+# Optional provider connector for the local Microsoft Agent Framework + Ollama mode.
+# Install with: pip install --pre -r requirements-ai.txt
+agent-framework-ollama

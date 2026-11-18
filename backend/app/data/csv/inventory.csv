@@ -1,0 +1,5 @@
+sku_id,product_name,warehouse,current_stock,safety_stock,unit_cost_inr,category
+SKU-AX14,Industrial Pump Controller,North Hub,120,180,2450,Control Systems
+SKU-BT22,Smart Valve Assembly,West Hub,320,150,980,Fluid Systems
+SKU-CX31,Precision Sensor Module,Central Hub,80,200,1720,Industrial IoT
+SKU-DP44,Conveyor Drive Motor,South Hub,210,160,4100,Automation

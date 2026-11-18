@@ -1,0 +1,27 @@
+digraph NEXUS {
+  graph [rankdir=LR, bgcolor="#070b13", pad="0.28", nodesep="0.34", ranksep="0.62", splines=ortho, fontname="Manrope", label="NEXUS · BLACKBOARD MULTI-AGENT ARCHITECTURE", labelloc=t, fontsize=18, fontcolor="#eaf1f6"];
+  node [shape=box, style="rounded,filled", fontname="Manrope", fontsize=10, margin="0.18,0.12", color="#365364", fillcolor="#122633", fontcolor="#eaf1f6", penwidth=1.2];
+  edge [color="#65d8df", penwidth=1.35, arrowsize=0.7];
+  input [label="DISRUPTION REPORT\nSupplier delay · Stockout · Route block", fillcolor="#1a2835", color="#b5a0ff"];
+  monitor [label="01  MONITOR AGENT\nParse signal · Identify affected SKU"];
+  inventory [label="02  INVENTORY AGENT\nRead stock · Check safety buffer", color="#9c86ee"];
+  supplier [label="03  SUPPLIER AGENT\nFind alternatives · Calculate coverage", color="#8dbf5b"];
+  route [label="04  ROUTE AGENT\nFind open paths · Score capacity", color="#d89965"];
+  coordinator [label="05  COORDINATOR AGENT\nCompare options · Notify parties", fillcolor="#192d36", color="#83b8ff", penwidth=1.7];
+  board [shape=cylinder, label="SHARED BLACKBOARD\nStructured posts · Run state", fillcolor="#132b2a", color="#65d8df", penwidth=1.8];
+  decision [label="MITIGATION DECISION\nREORDER / REROUTE / HOLD", fillcolor="#1e2a23", color="#b4ef77", penwidth=1.7];
+  notify [label="NOTIFICATION PLAN\nWarehouse · Procurement · Logistics", fillcolor="#182230", color="#b5a0ff"];
+  audit [shape=cylinder, label="APPEND-ONLY JSONL\nAgent events + decision trace", fillcolor="#19232f", color="#8b9eb2"];
+  api [label="FASTAPI\nREST endpoints", fillcolor="#172231", color="#83b8ff"];
+  ui [label="REACT CONTROL ROOM\nOverview · Mission · Network · Audit", fillcolor="#122e37", color="#65d8df", penwidth=1.5];
+  input -> monitor -> board;
+  board -> inventory -> board;
+  board -> supplier -> board;
+  board -> route -> board;
+  board -> coordinator -> board;
+  coordinator -> decision -> notify;
+  board -> audit;
+  decision -> audit;
+  decision -> api -> ui;
+  {rank=same; inventory; supplier; route;}
+}

@@ -1,0 +1,12 @@
+route_id,origin,destination,transit_days,freight_cost_inr,reliability_pct,capacity_units,status,route_type
+RT-N-01,Plant Alpha,North Hub,2.0,18000,96,800,OPEN,EXPRESS
+RT-N-02,Plant Beta,North Hub,3.0,12800,94,1000,OPEN,STANDARD
+RT-N-03,Plant Gamma,North Hub,1.5,24200,98,300,OPEN,EXPRESS
+RT-W-01,Plant Delta,West Hub,1.5,9000,97,700,BLOCKED,EXPRESS
+RT-W-02,Plant Echo,West Hub,2.5,7400,95,900,OPEN,STANDARD
+RT-W-03,Plant Foxtrot,West Hub,3.0,6200,92,1200,OPEN,ECONOMY
+RT-C-01,Plant Kilo,Central Hub,2.0,11200,96,650,OPEN,STANDARD
+RT-C-02,Plant Lima,Central Hub,2.5,9400,93,900,OPEN,ECONOMY
+RT-C-03,Plant Mike,Central Hub,1.0,17400,98,250,OPEN,EXPRESS
+RT-S-01,Plant Oscar,South Hub,2.0,15500,95,750,OPEN,STANDARD
+RT-S-02,Plant Papa,South Hub,3.0,11200,94,1100,OPEN,ECONOMY

@@ -1,0 +1,24 @@
+flowchart LR
+    U[Disruption report] --> M[Monitor Agent]
+    M --> B[(Shared Blackboard)]
+    B --> I[Inventory Agent]
+    I --> B
+    B --> S[Supplier Agent]
+    S --> B
+    B --> R[Route Agent]
+    R --> B
+    B --> C[Coordinator Agent]
+    C --> B
+    C --> D[Mitigation decision\nREORDER / REROUTE / HOLD]
+    D --> N[Notification plan]
+    B --> A[(Append-only JSONL audit log)]
+    D --> P[(Run snapshot JSON)]
+    P --> API[FastAPI]
+    API --> UI[React control-room UI]
+
+    classDef worker fill:#122633,stroke:#65d8df,color:#eaf1f6,stroke-width:1px
+    classDef store fill:#14231e,stroke:#b4ef77,color:#eaf1f6,stroke-width:1px
+    classDef output fill:#1c1d31,stroke:#b5a0ff,color:#eaf1f6,stroke-width:1px
+    class M,I,S,R,C worker
+    class B,A,P store
+    class D,N,API,UI output

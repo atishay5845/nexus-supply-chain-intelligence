@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.env
+
+# Node
+node_modules/
+dist/
+
+# Runtime outputs (keep the directory placeholders, not local run history)
+backend/runtime/runs/*.json
+backend/runtime/append_only_run_log.jsonl
+!backend/runtime/runs/.gitkeep
+!backend/runtime/.gitkeep
